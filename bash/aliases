@@ -1,0 +1,41 @@
+alias locate=mdfind # uses spotlight to search
+alias e=mate
+alias tm=mate
+
+alias top="top -ocpu"
+alias fsizes="du -h -d 0 ./*"
+
+alias ..="cd .."
+alias ...="cd .. && cd .."
+alias ....="cd .. && cd .. && cd .."
+
+# ls
+alias ls='ls -alFG'
+alias ll='ls -alFG'
+
+alias pwgen='dd if=/dev/urandom count=1 bs=48 2>/dev/null|uuencode -m -|tail -2|head -1'
+
+# show difference between the HEAD and the index
+alias staged="git diff --cached"
+
+# show difference between working tree and the index
+alias unstaged="git diff"
+
+alias r="rake"
+alias gdi="git diff"
+alias gb="git branch -v"
+alias gba="git branch -av"
+alias gs="git status"
+alias gst="git status"
+alias gpr="git pull --rebase"
+alias gco="git checkout"
+alias gcm="git checkout master"
+alias gci="git commit -v"
+alias gam="git commit -v --amend"
+alias grb="git rebase -i HEAD~10"
+alias gcia="git commit -a -v"
+alias gitrmall='git ls-files --deleted|xargs git rm'
+
+alias pg_start='sudo su postgres -c "/usr/local/bin/pg_ctl -D /var/db/postgresql/defaultdb start -l /var/log/postgres.log"'
+alias pg_stop='sudo su postgres -c "/usr/local/bin/pg_ctl -D /var/db/postgresql/defaultdb stop -s -m fast"'
+

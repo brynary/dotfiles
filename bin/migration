@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+output = `script/generate migration #{ARGV[0]}`
+puts output
+
+migration_file = %r|db/migrate/.*\.rb|.match(output)[0]
+
+cmd = "mate #{migration_file}"
+puts cmd
+`#{cmd}`

@@ -1,0 +1,3 @@
+--ignore-dir=cache
+--type-add=features=.feature
+--sort-files

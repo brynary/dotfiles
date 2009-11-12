@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+# dir = ARGV.any? ? File.join(ARGV.first, "*") : "*"
+Dir.chdir(ARGV.first) if ARGV.any?
+
+if !File.exist?("Rakefile") && !File.exist?("Thorfile")
+  raise "This doesn't look like a Ruby project"
+end
+
+files = Dir["*"] - %w[log protected tmp vendor script coverage pkg results doc pkg]
+
+files.reject! { |file| file =~ /\.dump$/ }
+files.reject! { |file| file =~ /\.tmproj$/ }
+
+`mate #{files.join(" ")}`

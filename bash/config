@@ -1,0 +1,6 @@
+if [ -f /opt/local/etc/bash_completion ]; then
+  source /opt/local/etc/bash_completion
+fi
+
+source /usr/local/etc/git-completion.bash
+complete -o default -o nospace -F _git_checkout gco
