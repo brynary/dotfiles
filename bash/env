@@ -1,5 +1,7 @@
 export PATH=~/bin:$PATH
 
+export ARCHFLAGS="-arch x86_64"
+
 export EDITOR="mate_wait"
 export SVN_EDITOR="mate_wait"
 
