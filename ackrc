@@ -1,3 +1,4 @@
 --ignore-dir=cache
+--ignore-dir=gems
 --type-add=features=.feature
 --sort-files
