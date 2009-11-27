@@ -75,7 +75,7 @@ class GrowlFormatter < Spec::Runner::Formatter::BaseFormatter
 private
 
   def silent_detached_exec(command)
-    puts "Running: #{command}"
+    # puts "Running: #{command}"
     Kernel.silence_stream(STDOUT) do
       Kernel.silence_stream(STDERR) do
         fork do

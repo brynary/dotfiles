@@ -2,6 +2,8 @@ def all_specs
   "spec/models/ spec/lib/ spec/integration/"
 end
 
+`growlnotify -n autotest -m '#{Dir.pwd}' 'Watchr Started'`
+
 trap 'INT' do
   if $interrupted
     exit! 0
