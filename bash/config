@@ -8,3 +8,4 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 complete -o default -o nospace -F _git_checkout gco
+complete -C ~/bin/cap_completion -o default cap
