@@ -30,9 +30,11 @@ alias gst="git status"
 alias gpr="git pull --rebase"
 alias gco="git checkout"
 alias gcm="git checkout master"
+alias gc="git commit -v"
 alias gci="git commit -v"
 alias gam="git commit -v --amend"
 alias grb="git rebase -i HEAD~10"
+alias gca="git commit -a -v"
 alias gcia="git commit -a -v"
 alias gitrmall='git ls-files --deleted|xargs git rm'
 
