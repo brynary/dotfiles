@@ -1,4 +1,6 @@
 --ignore-dir=cache
 --ignore-dir=gems
 --type-add=features=.feature
+--type-add=ruby=.ru
+--type-add=ruby=.gemspec
 --sort-files
