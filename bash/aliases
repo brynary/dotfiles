@@ -21,6 +21,8 @@ alias staged="git diff --cached"
 # show difference between working tree and the index
 alias unstaged="git diff"
 
+alias g="grep"
+
 alias r="rake"
 alias gdi="git diff"
 alias gb="git branch -v"
@@ -31,11 +33,11 @@ alias gpr="git pull --rebase"
 alias gco="git checkout"
 alias gcm="git checkout master"
 alias gc="git commit -v"
-alias gci="git commit -v"
+alias gpc="git-pair commit -v"
 alias gam="git commit -v --amend"
 alias grb="git rebase -i HEAD~10"
 alias gca="git commit -a -v"
-alias gcia="git commit -a -v"
+alias gpca="git-pair commit -a -v"
 alias gitrmall='git ls-files --deleted|xargs git rm'
 
 alias watchr='watchr ~/p/active/dotfiles/rspec/watchr.rb'
@@ -44,4 +46,4 @@ alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print $2}'|xargs kill -s INT"
 alias pg_start="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
-
+alias mongo_start="mongod run --config /usr/local/Cellar/mongodb/1.4.1-x86_64/mongod.conf"
