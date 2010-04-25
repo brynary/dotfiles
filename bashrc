@@ -1,7 +1,7 @@
 source ~/p/active/dotfiles/bash/env
 source ~/p/active/dotfiles/bash/config
 source ~/p/active/dotfiles/bash/aliases
-source ~/p/active/dotfiles/bash/work
+if [[ -s ~/p/active/dotfiles/bash/work ]] ; then source ~/p/active/dotfiles/bash/work ; fi
 
 cd ~/p/active
 
