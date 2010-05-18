@@ -11,5 +11,6 @@ files = Dir["*"] - %w[log protected tmp vendor script coverage pkg results doc p
 
 files.reject! { |file| file =~ /\.dump$/ }
 files.reject! { |file| file =~ /\.tmproj$/ }
+files.reject! { |file| file =~ /\.rbc$/ }
 
 `mate #{files.join(" ")}`
