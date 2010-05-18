@@ -48,3 +48,4 @@ alias pg_stop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias mongo_start="mongod run --config /usr/local/Cellar/mongodb/1.4.1-x86_64/mongod.conf"
 alias mysql_start="/usr/local/Cellar/mysql/5.1.46/share/mysql/mysql.server start"
+alias redis_start="redis-server /usr/local/etc/redis.conf"
