@@ -2,5 +2,8 @@
 --ignore-dir=gems
 --type-add=features=.feature
 --type-add=ruby=.ru
+--type-add=ruby=.haml
 --type-add=ruby=.gemspec
+--type-add=javascript=.json
+--type-add=css=.sass
 --sort-files
