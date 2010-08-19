@@ -2,6 +2,11 @@ alias locate=mdfind # uses spotlight to search
 alias e=mate
 alias tm=mate
 
+alias jruby="rvm use jruby"
+alias rbx="rvm use rbx"
+alias ree="rvm use ree"
+alias gemdir='cd `rvm gemdir`'
+
 alias top="top -ocpu"
 alias fsizes="du -h -d 0 ./*"
 
@@ -39,6 +44,8 @@ alias grb="git rebase -i HEAD~10"
 alias gca="git commit -a -v"
 alias gpca="git-pair commit -a -v"
 alias gitrmall='git ls-files --deleted|xargs git rm'
+
+eval `hub alias -s bash`
 
 alias watchr='watchr ~/p/active/dotfiles/rspec/watchr.rb'
 alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print $2}'|xargs kill -s INT"
