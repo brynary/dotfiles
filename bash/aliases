@@ -5,6 +5,7 @@ alias tm=mate
 alias jruby="rvm use jruby"
 alias rbx="rvm use rbx"
 alias ree="rvm use ree"
+alias ruby19="rvm use ruby-1.9.2"
 alias gemdir='cd `rvm gemdir`'
 
 alias top="top -ocpu"
