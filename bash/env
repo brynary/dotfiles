@@ -12,6 +12,7 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
 export GOROOT=`brew --prefix`/Cellar/go/HEAD
+export GOBIN=/usr/local/bin
 export GOARCH=amd64
 export GOOS=darwin
 
