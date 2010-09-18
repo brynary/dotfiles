@@ -18,6 +18,7 @@ alias ....="cd .. && cd .. && cd .."
 # ls
 alias ls='ls -alFG'
 alias ll='ls -alFG'
+alias l='ls -alFG'
 
 alias pwgen='dd if=/dev/urandom count=1 bs=48 2>/dev/null|uuencode -m -|tail -2|head -1'
 
