@@ -48,6 +48,7 @@ alias gitrmall='git ls-files --deleted|xargs git rm'
 
 eval `hub alias -s bash`
 
+alias cuc="bundle exec cucumber"
 alias watchr='watchr ~/p/active/dotfiles/rspec/watchr.rb'
 alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print $2}'|xargs kill -s INT"
 
