@@ -2,10 +2,6 @@ alias locate=mdfind # uses spotlight to search
 alias e=mate
 alias tm=mate
 
-alias jruby="rvm use jruby"
-alias rbx="rvm use rbx"
-alias ree="rvm use ree"
-alias ruby19="rvm use ruby-1.9.2"
 alias gemdir='cd `rvm gemdir`'
 
 alias top="top -ocpu"
@@ -37,6 +33,7 @@ alias gba="git branch -av"
 alias gs="git status"
 alias gst="git status"
 alias gpr="git pull --rebase"
+alias go="git checkout"
 alias gco="git checkout"
 alias gcm="git checkout master"
 alias gc="git commit -v"
@@ -47,11 +44,10 @@ alias gca="git commit -a -v"
 alias gpca="git-pair commit -a -v"
 alias gitrmall='git ls-files --deleted|xargs git rm'
 
-eval `hub alias -s bash`
+alias b="bundle exec"
 
 alias cuc="bundle exec cucumber"
-alias watchr='watchr ~/p/active/dotfiles/rspec/watchr.rb'
-alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print $2}'|xargs kill -s INT"
+alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print \$2}'|xargs kill -s INT"
 
 alias pg_start="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
