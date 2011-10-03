@@ -2,8 +2,6 @@ alias locate=mdfind # uses spotlight to search
 alias e=mate
 alias tm=mate
 
-alias gemdir='cd `rvm gemdir`'
-
 alias top="top -ocpu"
 alias fsizes="du -h -d 0 ./*"
 
