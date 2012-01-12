@@ -2,7 +2,7 @@ export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/l
 
 export ARCHFLAGS="-arch x86_64"
 
-export EDITOR="subl -w"
+export EDITOR="subl -n -w"
 
 # Both REE 1.8.7 and patched 1.9.2
 export RUBY_GC_MALLOC_LIMIT=1000000000
