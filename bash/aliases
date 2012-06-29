@@ -1,8 +1,4 @@
 alias locate=mdfind # uses spotlight to search
-alias subl="subl -n"
-alias mate="subl"
-alias tm="subl"
-alias mr="subl ."
 
 alias top="top -ocpu"
 alias fsizes="du -h -d 0 ./*"
