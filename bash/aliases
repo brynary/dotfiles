@@ -34,7 +34,6 @@ alias gs="git status"
 alias gst="git status"
 alias gpr="git pull --rebase"
 alias push="git push"
-alias go="git checkout"
 alias gco="git checkout"
 alias gcm="git checkout master"
 alias gc="git commit -v"
@@ -59,4 +58,12 @@ alias redis_start="redis-server /usr/local/etc/redis.conf"
 
 pt() {
   papertrail -f $@ | perl -pe 's/^(.{15})(.)([\S]+)(.)([\S]+)/\e[0;37m\1\e[0m\2\e[1;31m\3\e[0m\4\e[1;34m\5\e[0m/g'
+}
+
+rake() {
+  if [ -f ./bin/rake ]; then
+    ./bin/rake $@
+  else
+    command rake $@
+  fi
 }
