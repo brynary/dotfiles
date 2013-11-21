@@ -19,3 +19,6 @@
 [core]
   autocrlf = input
   safecrlf = true
+  excludesfile = /Users/bhelmkamp/.gitignore
+[push]
+	default = simple

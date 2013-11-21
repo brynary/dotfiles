@@ -1,1 +1,6 @@
+.gem/credentials
+.gnupg/
+.ssh/
+
 .DS_Store
+.tags*
