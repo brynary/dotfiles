@@ -21,4 +21,4 @@
   safecrlf = true
   excludesfile = /Users/bhelmkamp/.gitignore
 [push]
-	default = simple
+  default = simple
