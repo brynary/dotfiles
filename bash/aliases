@@ -1,13 +1,11 @@
 alias locate=mdfind # uses spotlight to search
 
-alias top="top -ocpu"
 alias fsizes="du -h -d 0 ./*"
 
 alias ..="cd .."
 alias ...="cd .. && cd .."
 alias ....="cd .. && cd .. && cd .."
 
-# ls
 alias ls='ls -alFG'
 alias ll='ls -alFG'
 alias l='ls -alFG'
@@ -20,46 +18,18 @@ alias staged="git diff --cached"
 # show difference between working tree and the index
 alias unstaged="git diff"
 
-alias g="grep"
-
-alias r="rake"
 alias gdi="git diff"
 alias gb="git branch -v"
 alias gba="git branch -av"
 alias gs="git status"
-alias gst="git status"
 alias gpr="git pull --rebase"
 alias push="git push"
 alias gco="git checkout"
 alias gcm="git checkout master"
 alias gc="git commit -v"
-alias gpc="git-pair commit -v"
 alias gam="git commit -v --amend"
 alias grb="git rebase -i HEAD~10"
 alias gca="git commit -a -v"
-alias gpca="git-pair commit -a -v"
 alias gitrmall='git ls-files --deleted|xargs git rm'
 
 alias b="bundle exec"
-
-alias cuc="bundle exec cucumber"
-alias kick_watchr="ps -ef|grep '[w]atchr'|awk '{print \$2}'|xargs kill -s INT"
-
-alias pg_start="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pg_stop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-alias mongo_start="mongod run --config /usr/local/Cellar/mongodb/1.4.1-x86_64/mongod.conf"
-alias mysql_start="/usr/local/Cellar/mysql/5.1.46/share/mysql/mysql.server start"
-alias redis_start="redis-server /usr/local/etc/redis.conf"
-
-pt() {
-  papertrail -f $@ | perl -pe 's/^(.{15})(.)([\S]+)(.)([\S]+)/\e[0;37m\1\e[0m\2\e[1;31m\3\e[0m\4\e[1;34m\5\e[0m/g'
-}
-
-rake() {
-  if [ -f ./bin/rake ]; then
-    ./bin/rake $@
-  else
-    command rake $@
-  fi
-}
