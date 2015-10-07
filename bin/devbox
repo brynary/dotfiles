@@ -1,0 +1,22 @@
+#!/bin/sh
+set -ex
+
+if ! docker port devbox 3000/tcp > /dev/null 2>&1; then
+  if docker ps -a | grep devbox > /dev/null 2>&1; then
+    echo "Booting devbox..."
+    docker start devbox > /dev/null
+  else
+    echo "Creating devbox..."
+    docker run \
+      --name=devbox \
+      --daemon \
+      --volumes-from=ssh-agent \
+      --volume /tmp:/tmp:rw \
+      --volume $HOME:$HOME \
+      --env SSH_AUTH_SOCK=/root/.ssh/socket \
+      -p 3000:3000 \
+      brynary/devbox sleep infinity > /dev/null
+  fi
+fi
+
+docker exec -it --user=dev devbox /bin/bash -l

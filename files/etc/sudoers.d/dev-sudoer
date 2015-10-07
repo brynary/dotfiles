@@ -1,0 +1,2 @@
+dev         ALL=(ALL) ALL
+Defaults:dev      !authenticate
