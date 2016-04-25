@@ -5,18 +5,29 @@ if ! docker port devbox 3000/tcp > /dev/null 2>&1; then
   if docker ps -a | grep devbox > /dev/null 2>&1; then
     echo "Booting devbox..."
     docker start devbox > /dev/null
+    sleep 1
   else
     echo "Creating devbox..."
     docker run \
       --name=devbox \
-      --daemon \
+      --detach \
       --volumes-from=ssh-agent \
-      --volume /tmp:/tmp:rw \
-      --volume $HOME:$HOME \
+      --net=dev \
+      --tty=true \
+      -v /tmp:/tmp:rw \
+      -v $HOME/.docker/machine/certs:/root/.docker:ro \
+      -v $HOME/p:$HOME/p \
       --env SSH_AUTH_SOCK=/root/.ssh/socket \
+      -p 8080:8080 \
       -p 3000:3000 \
-      brynary/devbox sleep infinity > /dev/null
+      -p 3001:3001 \
+      -p 3002:3002 \
+      -p 3003:3003 \
+      -p 4000:4000 \
+      brynary/devbox > /dev/null
+    sleep 1
   fi
 fi
 
-docker exec -it --user=dev devbox /bin/bash -l
+echo "export DOCKER_HOST=tcp://$(docker-machine ip default):2376" > ~/p/.docker.env
+docker exec -it devbox bash

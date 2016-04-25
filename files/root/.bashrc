@@ -1,5 +1,3 @@
-cd /p
-
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export HISTCONTROL=ignoredups
@@ -15,9 +13,21 @@ fi
 
 complete -o default -o nospace -F _git_checkout gco
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-source /usr/local/share/z.sh
+if [ -f /usr/local/share/chruby/chruby.sh ]; then
+  source /usr/local/share/chruby/chruby.sh
+fi
+
+if [ -f /usr/local/share/chruby/auto.sh ]; then
+  source /usr/local/share/chruby/auto.sh
+fi
+
+if [ -f /usr/local/share/z.sh ]; then
+  source /usr/local/share/z.sh
+fi
+
+if [ -f /Users/bhelmkamp/p/.docker.env ]; then
+  source /Users/bhelmkamp/p/.docker.env
+fi
 
 alias top="top -ocpu"
 alias fsizes="du -h -d 0 ./*"
@@ -58,5 +68,4 @@ alias gitrmall='git ls-files --deleted|xargs git rm'
 
 alias b="bundle exec"
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_TLS_VERIFY=1
