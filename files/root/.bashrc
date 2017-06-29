@@ -1,25 +1,18 @@
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export HISTCONTROL=ignoredups
+export HISTSIZE=99999999999999
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 source /etc/bash_completion.d/git-prompt
 export PS1='\n$(if [ $? = 0 ]; then echo "\[\033[0;32m\]☺"; else echo "\[\033[0;31m\]☹"; fi) \[\033[01;36m\]\w \[\033[01;35m\]$(__git_ps1 "(%s)")\n\[\033[01;32m\] [devbox \t] \[\033[01;36m\]$\[\033[00m\] '
 
-if [ -f /usr/local/etc/bash_completion ]; then
-  source /usr/local/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 complete -o default -o nospace -F _git_checkout gco
-
-if [ -f /usr/local/share/chruby/chruby.sh ]; then
-  source /usr/local/share/chruby/chruby.sh
-fi
-
-if [ -f /usr/local/share/chruby/auto.sh ]; then
-  source /usr/local/share/chruby/auto.sh
-fi
 
 if [ -f /usr/local/share/z.sh ]; then
   source /usr/local/share/z.sh
