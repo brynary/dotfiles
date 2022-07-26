@@ -1,5 +1,0 @@
-export PATH=./bin:~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7/bin:$PATH
-
-if [ -f ~/.bash_secrets ]; then
-   source ~/.bash_secrets
-fi
