@@ -43,3 +43,7 @@ if test "$(uname)" = "Darwin"; then
     export EDITOR="code --wait"
 fi
 
+# Load rbenv automatically by appending
+# the following to ~/.zshrc:
+
+eval "$(rbenv init - zsh)"

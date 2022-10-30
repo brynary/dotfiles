@@ -47,7 +47,7 @@ defaults write com.apple.dock "autohide" -bool "true"
 defaults write com.apple.screencapture "disable-shadow" -bool "false"
 
 echo "Installing Homebrew packages..."
-brew install coreutils gh openssl jq readline wget tree rust
+brew install coreutils gh openssl jq readline wget tree nodejs libpq rbenv
 
 brew install --cask iterm2
 brew install --cask launchbar
