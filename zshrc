@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export GPG_TTY=$(tty)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -38,6 +39,7 @@ alias gam="git commit -v --amend"
 alias grb="git rebase -i HEAD~10"
 alias gca="git commit -a -v"
 alias gitrmall='git ls-files --deleted | xargs git rm'
+alias save='gca --allow-empty-message -m ""'
 
 if test "$(uname)" = "Darwin"; then
     export EDITOR="code --wait"
@@ -47,3 +49,5 @@ fi
 # the following to ~/.zshrc:
 
 eval "$(rbenv init - zsh)"
+
+export PATH="$HOME/.qlty/bin:$PATH"

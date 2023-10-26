@@ -6,6 +6,7 @@
 [user]
   name = Bryan Helmkamp
   email = bryan@brynary.com
+	signingkey = E41F7C5DE654E7A0
 [alias]
   co = checkout
   ci = commit
@@ -22,3 +23,5 @@
   excludesfile = /Users/bhelmkamp/.gitignore
 [push]
   default = simple
+[commit]
+	gpgsign = true

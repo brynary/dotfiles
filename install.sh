@@ -10,6 +10,3 @@ ln -s $dotfiles_dir/gitignore ~/.gitignore
 
 rm -f ~/.zshrc
 ln -s $dotfiles_dir/zshrc ~/.zshrc
-
-echo "Initializing conda for zsh."
-conda init zsh
