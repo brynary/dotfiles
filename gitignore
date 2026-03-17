@@ -1,1 +1,5 @@
 .DS_Store
+**/.claude/settings.local.json
+codeql-*.db/
+**/docs-internal/agent/**
+**/docs/agent/**

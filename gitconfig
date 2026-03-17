@@ -6,7 +6,7 @@
 [user]
   name = Bryan Helmkamp
   email = bryan@brynary.com
-	signingkey = E41F7C5DE654E7A0
+	signingkey = EDB7F3CD464971E2
 [alias]
   co = checkout
   ci = commit
@@ -20,8 +20,41 @@
 [core]
   autocrlf = input
   safecrlf = true
-  excludesfile = /Users/bhelmkamp/.gitignore
+	excludesfile = /Users/bhelmkamp/.gitignore
 [push]
   default = simple
+	autoSetupRemote = true
+	followTags = true
 [commit]
 	gpgsign = true
+	verbose = true
+[gpg]
+	program = gpg
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	mnemonicPrefix = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[pull]
+	rebase = true
