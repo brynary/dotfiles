@@ -72,7 +72,6 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/Users/bhelmkamp/.bun/bin:$PATH"
-export PATH="/Users/bhelmkamp/p/fabro-sh/fabro/target/release:$PATH"
 
 # # nvm
 # export NVM_DIR="$HOME/.nvm"
@@ -91,3 +90,15 @@ source /Users/bhelmkamp/.daytona.completion_script.zsh
 alias codex="codex --yolo"
 
 implement() { local id=$(fabro run --goal-file "$1" --detach implement) && fabro logs --pretty -f "$id"; }
+
+# bun completions
+[ -s "/Users/bhelmkamp/.bun/_bun" ] && source "/Users/bhelmkamp/.bun/_bun"
+
+# fabro
+export PATH="/Users/bhelmkamp/.fabro/bin:$PATH"
+
+# fabro
+export PATH="$HOME/.fabro/bin:$PATH"
+
+# fabro release build takes precedence
+export PATH="/Users/bhelmkamp/p/fabro-sh/fabro/target/release:$PATH"
