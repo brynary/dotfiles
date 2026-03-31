@@ -49,28 +49,33 @@ defaults write com.apple.screencapture "disable-shadow" -bool "false"
 echo "Installing Homebrew packages..."
 brew install coreutils gh openssl jq readline wget tree nodejs libpq rbenv
 
-# brew install --cask iterm2
-# brew install --cask google-chrome
-# brew install --cask soulver
-# brew install --cask spotify
-# brew install --cask 1password
-# brew install --cask notion
-# brew install --cask zoom
-# brew install --cask slack
-# brew install --cask visual-studio-code
-# brew install --cask signal
-# brew install --cask reflect
+brew install --cask iterm2
+brew install --cask google-chrome
+brew install --cask soulver
+brew install --cask spotify
+brew install --cask 1password
+brew install --cask zoom
+brew install --cask slack
+brew install --cask visual-studio-code
+brew install --cask signal
+brew install --cask reflect
+brew install --cask zed
 
-# echo "Installing Mac App Store and packages..."
-# brew install mas # Mac App Store
-# mas install 1091189122 # Bear
+brew install --cask raycast
+brew install --cask ghostty
 
-# if test -f /usr/local/bin/docker; then
-#     echo "Docker already installed"
-# else
-#     echo "Downloading Docker installer to ~/Downloads"
-#     wget "https://desktop.docker.com/mac/main/arm64/Docker.dmg" ~/Downloads/Docker.dmg
-#     echo "Done. Open ~/Downloads/Docker.dmg to install"
-# fi
+brew install --cask chatgpt
+brew install --cask claude
+brew install --cask codex
+brew install --cask discord
+brew install --cask granola
+brew install --cask whatsapp
+brew install --cask microsoft-office
+brew install --cask orbstack
+brew install --cask wispr-flow
+brew install --cask google-drive
+brew install --cask claude-code
+brew install gemini-cli
+brew install tailscale
 
-
+# Pixelmator Pro

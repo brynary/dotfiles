@@ -68,7 +68,6 @@ esac
 # pnpm end
 
 alias claude="claude --dangerously-skip-permissions"
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/Users/bhelmkamp/.bun/bin:$PATH"
@@ -85,7 +84,7 @@ export PATH="/Users/bhelmkamp/.bun/bin:$PATH"
 # qlty completions
 [ -s "/opt/homebrew/share/zsh/site-functions/_qlty" ] && source "/opt/homebrew/share/zsh/site-functions/_qlty"
 
-source /Users/bhelmkamp/.daytona.completion_script.zsh
+[ -s "/Users/bhelmkamp/.daytona.completion_script.zsh" ] && source /Users/bhelmkamp/.daytona.completion_script.zsh
 
 alias codex="codex --yolo"
 
@@ -94,8 +93,7 @@ implement() { local id=$(fabro run --goal-file "$1" --detach implement) && fabro
 # bun completions
 [ -s "/Users/bhelmkamp/.bun/_bun" ] && source "/Users/bhelmkamp/.bun/_bun"
 
-# fabro
-export PATH="/Users/bhelmkamp/.fabro/bin:$PATH"
+export PATH="/Users/bhelmkamp/.local/bin:$PATH"
 
 # fabro
 export PATH="$HOME/.fabro/bin:$PATH"

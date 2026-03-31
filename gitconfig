@@ -6,7 +6,7 @@
 [user]
   name = Bryan Helmkamp
   email = bryan@brynary.com
-	signingkey = EDB7F3CD464971E2
+	signingkey = /Users/bhelmkamp/.ssh/id_ed25519.pub
 [alias]
   co = checkout
   ci = commit
@@ -30,6 +30,7 @@
 	verbose = true
 [gpg]
 	program = gpg
+	format = ssh
 [column]
 	ui = auto
 [branch]
